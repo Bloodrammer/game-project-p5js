@@ -1,4 +1,4 @@
-# game-project-p5js
+# mini-metroidvania-p5js
 
 Initially, this was my game project submission for a university module. It was fun implementing a 2d metroidvania MVP from scratch. I decided to put the lessons learned from https://gameprogrammingpatterns.com/ to practice and improve my code with design patterns.
 

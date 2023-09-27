@@ -9,6 +9,10 @@ Initially, this was my game project submission for a university module. It was f
 - [ ]  ???
 - [ ]  Profit!
 
+### Running the game
+
+Why would you? Anyway, set up a [web server](https://simplewebserver.org/) and choose the directory with this repository.
+
 
 # A warning to UoL students
 

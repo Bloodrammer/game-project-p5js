@@ -11,6 +11,7 @@ class GameLogic{
         initializeButtons();
         this.addScene(new MainMenu());
         this.currentSceneId = 0;
+        this.addScene(new GameScene(levelOneData));
         // draw background
         // game lifetime
         // character
@@ -32,19 +33,7 @@ class GameLogic{
         //    soundtrack2.stop();
     }
 
-    startGame(){
-        restartButton.hide();
-        startButton.hide();
-        this.currentSceneId = 1;
-        initializeGame();
-        playsound();
-    }
 
-    restartGame() {
-        restartButton.hide();
-        this.currentSceneId = 0;
-
-    }
 
     addScene(scene){
         this.scenes.push(scene);
@@ -56,18 +45,33 @@ class GameLogic{
 }
 
 // TODO create a button manager or something?
+
+function startGame(){
+    restartButton.hide();
+    startButton.hide();
+    gameLogic.currentSceneId = 1;
+    //        this.initialize();
+    //        playsound();
+}
+
+function restartGame() {
+    restartButton.hide();
+    gameLogic.currentSceneId = 0;
+
+}
+
 function initializeButtons(){
     restartButton = createButton('Go to main menu');
     restartButton.position(width / 2 - 50, height / 2 + 50);
-    //    restartButton.mousePressed(restartGame);
+    restartButton.mousePressed(restartGame);
     restartButton.hide();
     startButton = createButton('Start game');
     startButton.position(width / 2 - 50, height / 2 + 50);
-    //    startButton.mousePressed(startGame);
+    startButton.mousePressed(startGame);
     startButton.hide();
     // stop button
     stopSoundButton = createButton('Soundtrack on/off');
     stopSoundButton.position(5, 100);
-    //    stopSoundButton.mousePressed(stopsound);
+//    stopSoundButton.mousePressed(stopsound);
     stopSoundButton.hide();
 }

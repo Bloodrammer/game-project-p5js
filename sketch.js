@@ -50,6 +50,7 @@ var gameLifetime = 0.;
 var bestLifetime = 100000000;
 var flag;
 
+var enemiesInputs;
 var enemies;
 
 var restartButton;
@@ -338,7 +339,7 @@ function initializeGame() {
         new Collectable(width + 5128 + 256 + 512, -896),]
     flag = new Flag(0, 192);
 
-    var enemiesInputs = [[width / 2, height - 64, 64, 64, width / 3, width], [width + 256 * 8, height - 64],
+    enemiesInputs = [[width / 2, height - 64, 64, 64, width / 3, width], [width + 256 * 8, height - 64],
 
         [width + 7168 - 256, -784],
         [width + 7168, -784],
